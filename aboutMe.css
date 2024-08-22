@@ -1,0 +1,15 @@
+.aboutMe{
+    padding: 0 15vw;
+    text-align: justify;
+
+}
+
+#aboutMeText{
+    height: 33%;
+    overflow: hidden;
+
+    p{
+        position: relative;
+    }
+}
+

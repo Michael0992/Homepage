@@ -1,0 +1,66 @@
+
+.skillBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%;
+}
+
+
+.skillbar{
+    max-width: 80%;
+    width: 400px;
+}
+
+.skill {
+    
+    background-color: black;
+   
+    border-radius: 20px;
+    overflow: hidden;
+    border: solid 3px black;
+    box-shadow: 0 0  0px 1px var(--mainColor1);
+
+    .html {
+        width: 90%; 
+        background: linear-gradient(to bottom, var(--mainColor2), var(--mainColor1));
+        
+    }
+    .css {
+        width: 90%; 
+        background: linear-gradient(to bottom, var(--mainColor2), var(--mainColor1));
+        
+    }
+    .javaScript {
+        width: 85%; 
+        background: linear-gradient(to bottom, var(--mainColor2), var(--mainColor1));
+        
+    }
+
+    .cSharp{
+        width: 75%; 
+        background: linear-gradient(to bottom, var(--mainColor2), var(--mainColor1));
+        
+    }
+    .python {
+        width: 70%; 
+        background: linear-gradient(to bottom, var(--mainColor2), var(--mainColor1));
+        
+    }
+    .nwa{
+        width: 65%; 
+        background: linear-gradient(to bottom, var(--mainColor2), var(--mainColor1));
+        
+    }
+
+}
+
+.skillProgress{
+    text-align: end;
+    color: var(--backgroundColor1);
+    font-weight: bold;
+    box-shadow: 0 0  30px 5px var(--mainColor1);
+
+    
+}
+

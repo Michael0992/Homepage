@@ -1,0 +1,63 @@
+/* :root{
+    --backgroundColor1: black;
+    --backgroundColor2: black;
+    --mainColor1: rgb(0, 141, 197);
+    --mainColor2: rgb(0, 225, 255);
+    --mainColor3: white;
+    --effectValue1: 210deg;
+} */
+
+
+.cvTimeline{
+
+    padding: 50px 0;
+}
+
+
+.timelineBlock{
+
+    margin: 0 20px;
+    display: flex;
+    
+    
+
+    .element1{
+        margin-right: 30px;
+        padding-top: 30px;
+        position: relative;
+        min-width: 30vw;
+        text-align: end;
+
+    }
+    .element2{
+        background-color: var(--mainColor2);
+        position: relative;
+        min-width: 2px;
+
+        
+    }
+
+    .element2::after{
+        content: '';
+        position: absolute;
+        height: 15px;
+        width: 15px;
+        background-color: var(--mainColor3);
+        z-index: 3;
+        top: 30px;
+        left: -9px;
+        border-radius: 100%;
+        border: 3px solid black;
+        box-shadow: 0 0 1px 1px var(--mainColor3) ;
+    }
+
+
+    .element3{
+
+        position: relative;
+        margin-left: 30px;
+        right: 0;
+        padding-top: 30px;
+        width: 100%;
+    }
+}
