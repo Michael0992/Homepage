@@ -37,13 +37,13 @@
         
     }
 
-    .cSharp{
+    .csharp{
         width: 75%; 
         background: linear-gradient(to bottom, var(--mainColor2), var(--mainColor1));
         
     }
     .python {
-        width: 70%; 
+        width: 90%; 
         background: linear-gradient(to bottom, var(--mainColor2), var(--mainColor1));
         
     }
