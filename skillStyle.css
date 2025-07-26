@@ -47,16 +47,8 @@
         background: linear-gradient(to bottom, var(--mainColor2), var(--mainColor1));
         
     }
-    .ai{
-        width: 85%; 
-        background: linear-gradient(to bottom, var(--mainColor2), var(--mainColor1));
-        
-    }
-    .cplusplus{
-        width: 50%; 
-        background: linear-gradient(to bottom, var(--mainColor2), var(--mainColor1));
-        
-    }
+
+
 
 }
 

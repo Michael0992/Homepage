@@ -1,16 +1,8 @@
-/* :root{
-    --backgroundColor1: black;
-    --backgroundColor2: black;
-    --mainColor1: rgb(0, 141, 197);
-    --mainColor2: rgb(0, 225, 255);
-    --mainColor3: white;
-    --effectValue1: 210deg;
-} */
-
-
 .cvTimeline{
 
     padding: 50px 0;
+    color: white;
+    overflow: hidden;
 }
 
 
@@ -30,7 +22,7 @@
 
     }
     .element2{
-        background-color: var(--mainColor2);
+        background-color: white;
         position: relative;
         min-width: 2px;
 
@@ -42,13 +34,13 @@
         position: absolute;
         height: 15px;
         width: 15px;
-        background-color: var(--mainColor3);
+        background-color: black;
         z-index: 3;
         top: 30px;
-        left: -9px;
+        left: -6px;
         border-radius: 100%;
-        border: 3px solid black;
-        box-shadow: 0 0 1px 1px var(--mainColor3) ;
+        border: 3px solid white;
+        box-shadow: 0 0 1px 1px white ;
     }
 
 
