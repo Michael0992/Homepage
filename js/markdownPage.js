@@ -6,12 +6,16 @@
         if (/^(https?:)?\/\//i.test(url)) return url;
         if (url.startsWith('#')) return url;
         if (url.startsWith('data:')) return url;
+        if (url.startsWith('/')) return url;
+
+        if (assetBase && url.startsWith(assetBase)) return url;
 
         // Markdown in this repo references images like: imgs/image1.png
         // From projects/GDPython.html we want: projects/mds/imgs/...
         if (url.startsWith('imgs/')) return `${assetBase}${url}`;
 
-        return url;
+        // Generic relative assets (e.g. video.mp4)
+        return `${assetBase}${url}`;
     }
 
     async function renderProjectMarkdown({ markdownUrl, contentElementId, assetBase }) {
@@ -48,6 +52,14 @@
             });
 
             content.innerHTML = marked.parse(md);
+
+            // Fix up raw HTML media tags in markdown (e.g. <video src="video.mp4">)
+            const media = content.querySelectorAll('video[src], source[src], img[src]');
+            for (const el of media) {
+                const src = el.getAttribute('src');
+                const next = normalizeAssetUrl(src, assetBase);
+                if (next && next !== src) el.setAttribute('src', next);
+            }
         } catch (e) {
             content.innerHTML = `<p class="c-card-text">Konnte Markdown nicht laden. (${escapeHtml(String(e))})</p>`;
         }

@@ -240,9 +240,14 @@ html[data-theme="dark"] .app-navbar {
 }
 
 .c-card-link {
+    display: block;
     text-decoration: none;
     color: var(--text);
     transition: transform 120ms ease, border-color 120ms ease, background-color 120ms ease;
+}
+
+.c-card-clickable {
+    cursor: pointer;
 }
 
 .c-card-link:hover,
@@ -547,6 +552,16 @@ html[data-theme="dark"] .hero::before {
 .md-figure img {
     width: 100%;
     height: auto;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--surface-2);
+    box-shadow: var(--shadow);
+}
+
+.md-content video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
     border-radius: var(--radius);
     border: 1px solid var(--border);
     background: var(--surface-2);
