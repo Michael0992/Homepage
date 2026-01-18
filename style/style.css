@@ -500,3 +500,79 @@ html[data-theme="dark"] .hero::before {
     border-top: 1px solid var(--border);
     color: var(--muted);
 }
+
+/* Project / Markdown */
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.md-content {
+    line-height: 1.65;
+}
+
+.md-content h1,
+.md-content h2,
+.md-content h3,
+.md-content h4 {
+    color: var(--text);
+    font-weight: 750;
+    line-height: 1.15;
+    margin-top: 22px;
+}
+
+.md-content h1 {
+    font-size: clamp(26px, 2.7vw, 34px);
+}
+
+.md-content p {
+    color: var(--muted);
+}
+
+.md-content a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.md-content a:hover {
+    text-decoration: underline;
+}
+
+.md-figure {
+    margin: 16px 0;
+}
+
+.md-figure img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--surface-2);
+    box-shadow: var(--shadow);
+}
+
+.md-content code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.95em;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    padding: 0.1em 0.35em;
+    border-radius: 8px;
+    color: var(--text);
+}
+
+.md-content pre {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px;
+    overflow: auto;
+}
+
+.md-content pre code {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
