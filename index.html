@@ -1,13 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
     <head>
-        <title>Title</title>
+        <title>Michael Lutz | Portfolio</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <meta name="description" content="Portfolio von Michael Lutz – IT-Trainer & Full-Stack-Entwickler. Projekte, Skills und Werdegang." />
 
         <!-- Bootstrap CSS v5.2.1 -->
         <link
@@ -16,68 +17,116 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="cvStyle.css" />
+        <link rel="stylesheet" href="style/style.css" />
+        <link rel="stylesheet" href="style/cvStyle.css" />
     </head>
 
-    <body>
+    <body class="app">
         <header>
-            <nav class="navbar navbar-expand navbar-dark bg-dark">
-                <div class="nav navbar-nav">
-                    <a class="nav-item nav-link active" href="#" aria-current="page"
-                        ><h6>Michael Lutz</h6> <span class="visually-hidden">(current)</span></a
+            <nav class="navbar navbar-expand-lg app-navbar">
+                <div class="container">
+                    <a class="navbar-brand" href="#top">Michael Lutz</a>
+
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#mainNav"
+                        aria-controls="mainNav"
+                        aria-expanded="false"
+                        aria-label="Navigation umschalten"
                     >
-                    
-                    <a class="nav-item nav-link" href="#about">Über Mich</a>
-                    <a class="nav-item nav-link" href="#skills">Meine Stärken</a>
-                    <a class="nav-item nav-link" href="#cv">Mein Lebenslauf</a>
-                    <a class="nav-item nav-link" href="#projects">Meine Projekte</a>
-                    <a class="nav-item nav-link" href="#contakt">Kontakt</a>
-                    
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="mainNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="#about">Über mich</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#cv">Lebenslauf</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#projects">Projekte</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
             <!-- place navbar here -->
         </header>
         <main>
-            <div id="hero">
-                <div id="heroText">
-                    <h1>Willkommen auf meiner Seite</h1>
-                    <p>Ich bin Michael Lutz</p>
-                </div>
-                <div id="heroImage">
-                    <img src="rsc/profileIMG.png" alt="hero image" class="img-fluid" />
-                </div>
-                <!-- Doppelpfeil mittig unten -->
-                <a href="#about" class="arrow-down">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                        <path d="M12 20l12 12 12-12" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M12 12l12 12 12-12" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-            </div>
-            <div class="bg-dark">
-                <div id="about" style="padding-top:60px;"></div>
-                <div class="container text-light da" id="about">
-                    <h1>Über mich</h1>
-                    <p>
-                        Dies ist eine einfache HTML-Vorlage, die Bootstrap verwendet.
-                        Sie können sie anpassen, um Ihre eigenen Inhalte hinzuzufügen.
-                    </p>
-                </div>
-                <div id="skills" class="container text-light da">
-                    <h1>Meine Stärken</h1>
-                    <div id="icons">
+            <div id="top"></div>
+
+            <section id="hero" class="hero">
+                <div class="container hero-grid">
+                    <div class="hero-copy">
+                        <p class="hero-eyebrow">Portfolio</p>
+                        <h1>Hallo, ich bin Michael Lutz.</h1>
+                        <p class="hero-lead">
+                            IT-Trainer & Full-Stack-Entwickler mit Fokus auf praxisnahe Lernformate,
+                            saubere Software-Architektur und moderne Web-Technologien.
+                        </p>
+                        <p class="hero-roles" aria-label="Rollen" aria-live="polite">
+                            <span class="hero-roles-label">Aktuell:</span>
+                            <span id="heroTextEffect">IT Trainer</span>
+                        </p>
+                        <div class="hero-cta">
+                            <a class="c-btn c-btn-primary" href="#projects">Projekte ansehen</a>
+                            <a class="c-btn c-btn-ghost" href="#contact">Kontakt</a>
+                        </div>
+                    </div>
+                    <div class="hero-media">
+                        <img src="rsc/profileIMG.png" alt="Portrait von Michael Lutz" class="hero-image" />
                     </div>
                 </div>
-                <div class="container text-light da" >
-                    <h1>Werdegang</h1>
-                    <p>
-                        Dies ist eine einfache HTML-Vorlage, die Bootstrap verwendet.
-                        Sie können sie anpassen, um Ihre eigenen Inhalte hinzuzufügen.
-                    </p>
+
+                <a href="#about" class="hero-scroll" aria-label="Zum Inhalt scrollen">
+                    <svg width="28" height="28" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                        <path d="M12 20l12 12 12-12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 12l12 12 12-12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </section>
+
+            <section id="about" class="section">
+                <div class="container">
+                    <div class="section-head">
+                        <h2>Über mich</h2>
+                        <p class="section-subtitle">Kurzprofil, Arbeitsweise und Fokus.</p>
+                    </div>
+                    <div class="c-card">
+                        <p>
+                            Ich unterstütze Teams und Lernende dabei, Software-Themen verständlich und anwendbar zu machen –
+                            von Grundlagen bis zu praxisnahen Projekten. In der Entwicklung achte ich besonders auf Lesbarkeit,
+                            Wartbarkeit und ein stimmiges UI.
+                        </p>
+                        <ul class="c-list">
+                            <li>Schwerpunkte: Web-Entwicklung, .NET, Python, Tooling</li>
+                            <li>Arbeitsstil: strukturiert, pragmatisch, dokumentationsorientiert</li>
+                            <li>Interesse: UI/UX, Automatisierung, saubere Builds & Deployments</li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <section class="cvTimeline">
+            </section>
+
+            <section id="skills" class="section">
+                <div class="container">
+                    <div class="section-head">
+                        <h2>Skills</h2>
+                        <p class="section-subtitle">Tools & Technologien, mit denen ich regelmäßig arbeite.</p>
+                    </div>
+                    <div class="c-card">
+                        <div id="icons" class="icon-grid" aria-label="Technologie-Icons"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cv" class="section">
+                <div class="container">
+                    <div class="section-head">
+                        <h2>Lebenslauf</h2>
+                        <p class="section-subtitle">Werdegang (inhaltlich unverändert).</p>
+                    </div>
+
+                    <section class="cvTimeline" aria-label="Lebenslauf Zeitleiste">
                         <div class="timelineBlock">
                             <div class="element1">
                                 <span>Seit 08.2024</span>
@@ -218,23 +267,51 @@
                         </div>
                     </section>
                 </div>
-                <div id="contact" class="container">
-                    <h1>Kontakt</h1>
-                    <p>
-                        Sie können mich über die folgenden Kanäle erreichen:
-                    </p>
-                    
-                    <a href="mailto: michel.lutz92@gmail.com">✉️E-Mail</a>
-                    <a href="tel:+4915123456789">📱Mobile</a>
-                    <a href="https://www.linkedin.com/in/michael-lutz-123456789/">LinkedIn</a>
-                
+            </section>
 
+            <section id="projects" class="section">
+                <div class="container">
+                    <div class="section-head">
+                        <h2>Projekte</h2>
+                        <p class="section-subtitle">Auswahl – gerne ergänzen wir hier konkrete Repos/Links.</p>
+                    </div>
+
+                    <div class="project-grid">
+                        <article class="c-card">
+                            <h3 class="c-card-title">Portfolio Website</h3>
+                            <p class="c-card-text">Responsive Seite im Fluent-Stil mit klarer Struktur und Fokus auf Inhalte.</p>
+                        </article>
+                        <article class="c-card">
+                            <h3 class="c-card-title">Trainings & Demos</h3>
+                            <p class="c-card-text">Beispiele, Übungen und Mini-Projekte zur Wissensvermittlung (Frontend/Backend).</p>
+                        </article>
+                        <article class="c-card">
+                            <h3 class="c-card-title">Automatisierung</h3>
+                            <p class="c-card-text">Skripte/Tooling für wiederholbare Abläufe (Builds, Setup, Daten-Utilities).</p>
+                        </article>
+                    </div>
                 </div>
-                
-            </div>
+            </section>
+
+            <section id="contact" class="section">
+                <div class="container">
+                    <div class="section-head">
+                        <h2>Kontakt</h2>
+                        <p class="section-subtitle">Am schnellsten per E-Mail oder LinkedIn.</p>
+                    </div>
+
+                    <div class="contact-grid">
+                        <a class="c-card c-card-link" href="mailto: michel.lutz92@gmail.com">✉️ E-Mail</a>
+                        <a class="c-card c-card-link" href="tel:+4915123456789">📱 Mobile</a>
+                        <a class="c-card c-card-link" href="https://www.linkedin.com/in/michael-lutz-123456789/">LinkedIn</a>
+                    </div>
+                </div>
+            </section>
         </main>
-        <footer>
-            <!-- place footer here -->
+        <footer class="app-footer">
+            <div class="container">
+                <small>© <span id="year"></span> Michael Lutz</small>
+            </div>
         </footer>
         <!-- Bootstrap JavaScript Libraries -->
         <script
@@ -248,16 +325,10 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+        <script src="js/icons.js"></script>
+        <script src="js/heroText.js"></script>
         <script>
-            const container = document.getElementById('icons');
-            const icons = ['Arch-Dark.svg', 'Arduino.svg', 'Blender-Dark.svg', 'CS.svg', 'CSS.svg', 'DotNet.svg', 'Electron.svg', 'Flask-Dark.svg', 'Git.svg', 'Github-Dark.svg', 'Godot-Dark.svg', 'HTML.svg', 'JavaScript.svg', 'Linux-Dark.svg', 'MySQL-Dark.svg', 'Notion-Dark.svg', 'Powershell-Dark.svg', 'Python-Dark.svg', 'RaspberryPi-Dark.svg', 'SQLite.svg', 'Unity-Dark.svg', 'VisualStudio-Dark.svg', 'VSCode-Dark.svg', 'Windows-Dark.svg', 'Wordpress.svg'];
-            icons.forEach(icon => {
-                const img = document.createElement('img');
-                img.src = `rsc/ico/${icon}`;
-                img.alt = icon.split('.')[0];
-                img.className = 'icon';
-                container.appendChild(img);
-            });
+            document.getElementById('year').textContent = String(new Date().getFullYear());
         </script>
     </body>
 </html>

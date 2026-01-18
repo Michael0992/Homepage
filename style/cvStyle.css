@@ -1,0 +1,63 @@
+.cvTimeline {
+    padding: 16px 0;
+    overflow: hidden;
+}
+
+.timelineBlock {
+    margin: 0 8px;
+    display: flex;
+    gap: 0;
+}
+
+.timelineBlock .element1 {
+    margin-right: 18px;
+    padding-top: 22px;
+    position: relative;
+    min-width: min(320px, 34vw);
+    text-align: end;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.timelineBlock .element2 {
+    background-color: color-mix(in srgb, var(--text) 30%, transparent);
+    position: relative;
+    min-width: 2px;
+}
+
+.timelineBlock .element2::after {
+    content: '';
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    z-index: 3;
+    top: 24px;
+    left: -6px;
+    border-radius: 999px;
+    background-color: var(--surface);
+    border: 3px solid color-mix(in srgb, var(--accent) 55%, transparent);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.timelineBlock .element3 {
+    position: relative;
+    margin-left: 18px;
+    padding-top: 18px;
+    width: 100%;
+}
+
+.timelineBlock .element3 p {
+    margin: 0;
+    color: var(--text);
+}
+
+@media (max-width: 991px) {
+    .timelineBlock {
+        margin: 0;
+    }
+
+    .timelineBlock .element1 {
+        min-width: 140px;
+        font-size: 0.95rem;
+    }
+}
