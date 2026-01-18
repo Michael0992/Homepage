@@ -28,6 +28,7 @@
         'VSCode-Dark.svg',
         'Windows-Dark.svg',
         'Wordpress.svg',
+        'nodejs-Dark.svg',
     ];
 
     for (const icon of icons) {
