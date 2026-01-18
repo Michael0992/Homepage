@@ -10,6 +10,19 @@
         />
         <meta name="description" content="Portfolio von Michael Lutz – IT-Trainer & Full-Stack-Entwickler. Projekte, Skills und Werdegang." />
 
+        <script>
+            (() => {
+                try {
+                    const stored = localStorage.getItem('theme');
+                    if (stored === 'dark' || stored === 'light') {
+                        document.documentElement.dataset.theme = stored;
+                    }
+                } catch {
+                    // ignore
+                }
+            })();
+        </script>
+
         <!-- Bootstrap CSS v5.2.1 -->
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -25,7 +38,24 @@
         <header>
             <nav class="navbar navbar-expand-lg app-navbar">
                 <div class="container">
-                    <a class="navbar-brand" href="#top">Michael Lutz</a>
+                    <div class="d-flex align-items-center gap-2">
+                        <a class="navbar-brand" href="#top">Michael Lutz</a>
+
+                        <button
+                            id="themeToggle"
+                            class="c-theme-toggle"
+                            type="button"
+                            aria-label="Theme umschalten"
+                            aria-pressed="false"
+                        >
+                            <svg class="c-theme-toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M9 18h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M10 22h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M12 2a7 7 0 0 0-4 12c.7.6 1 1.2 1 2h6c0-.8.3-1.4 1-2a7 7 0 0 0-4-12Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            </svg>
+                            <span class="c-theme-toggle-text">Dark mode</span>
+                        </button>
+                    </div>
 
                     <button
                         class="navbar-toggler"
@@ -350,6 +380,7 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+        <script src="js/theme.js"></script>
         <script src="js/icons.js"></script>
         <script src="js/heroText.js"></script>
         <script>
