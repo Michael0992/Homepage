@@ -366,6 +366,28 @@
                 <small>© <span id="year"></span> Michael Lutz</small>
             </div>
         </footer>
+
+        <div class="modal fade" id="skillModal" tabindex="-1" aria-labelledby="skillModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="skillModalLabel">Skill</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <img id="skillModalImg" src="" alt="" width="56" height="56" style="object-fit:contain" />
+                            <div>
+                                <div class="fw-semibold" id="skillModalTitle"></div>
+                                <div class="text-muted" id="skillModalSubtitle">Technologie / Tool</div>
+                            </div>
+                        </div>
+                        <p class="mb-0" id="skillModalDescription"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

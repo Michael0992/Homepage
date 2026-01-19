@@ -460,6 +460,40 @@ html[data-theme="dark"] .hero::before {
     align-items: center;
 }
 
+.icon-grid .c-skill-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    padding: 10px;
+    border-radius: 14px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    transition: transform 120ms ease, border-color 120ms ease;
+    cursor: pointer;
+}
+
+.icon-grid .c-skill-btn:hover {
+    transform: translateY(-2px);
+    border-color: rgba(0, 120, 212, 0.35);
+}
+
+.icon-grid .c-skill-btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 120, 212, 0.25);
+}
+
+.icon-grid .c-skill-btn .icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    border: 0;
+}
+
 .icon-grid .icon {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -516,6 +550,31 @@ html[data-theme="dark"] .hero::before {
 
 .md-content {
     line-height: 1.65;
+}
+
+/* Skill modal (Bootstrap) – use theme colors */
+.modal-content {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border);
+}
+
+.modal .text-muted {
+    color: var(--muted) !important;
+}
+
+html[data-theme="dark"] .modal .btn-close {
+    filter: invert(1) grayscale(100%);
+}
+
+html[data-theme="light"] .modal .btn-close {
+    filter: none;
 }
 
 .md-content h1,
