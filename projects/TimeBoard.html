@@ -80,7 +80,7 @@
 			<section class="section">
 				<div class="container">
 					<article class="c-card md-content" id="mdContent" aria-label="Projektbeschreibung">
-						<p class="c-card-text">Noch keine Inhalte vorhanden.</p>
+						<p class="c-card-text">Lade Inhalt…</p>
 					</article>
 				</div>
 			</section>
@@ -106,7 +106,13 @@
 		<script src="../js/theme.js"></script>
 		<script src="../js/markdownPage.js"></script>
 		<script>
+			document.getElementById('year').textContent = String(new Date().getFullYear());
 
+			window.renderProjectMarkdown({
+				markdownUrl: 'mds/timeboard.md',
+				contentElementId: 'mdContent',
+				assetBase: 'mds/',
+			});
 		</script>
 	</body>
 </html>
