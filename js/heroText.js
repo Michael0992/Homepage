@@ -9,7 +9,6 @@
         'Full-Stack Developer',
         'Web Designer',
         '3D Artist',
-        'Technischer Produktdesigner',
     ];
 
     if (prefersReducedMotion) {
