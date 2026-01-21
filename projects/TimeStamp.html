@@ -79,8 +79,19 @@
 		<main>
 			<section class="section">
 				<div class="container">
+					<aside class="c-card mb-4" aria-label="Hinweis">
+						<p class="c-card-text mb-2">
+							<b>Folgendes Projekt beinhaltet Ausschnitte meiner IHK-Abschlussarbeit.</b>
+						</p>
+						<p class="c-card-text mb-3">
+							<b>Bitte berücksichtige, dass ich zum Zeitpunkt der Abgabe noch am Anfang meiner Karriere als Fachinformatiker war und dies mein erstes größeres Softwareprojekt darstellte.</b>
+						</p>
+						<figure class="md-figure mb-0">
+							<img src="mds/imgs/videoGIF.gif" alt="Kurzer Einblick (GIF)" loading="lazy" decoding="async" />
+						</figure>
+					</aside>
 					<article class="c-card md-content" id="mdContent" aria-label="Projektbeschreibung">
-						<p class="c-card-text">Noch keine Inhalte vorhanden.</p>
+						<p class="c-card-text">Lade Inhalt…</p>
 					</article>
 				</div>
 			</section>
@@ -106,7 +117,13 @@
 		<script src="../js/theme.js"></script>
 		<script src="../js/markdownPage.js"></script>
 		<script>
+			document.getElementById('year').textContent = String(new Date().getFullYear());
 
+			window.renderProjectMarkdown({
+				markdownUrl: 'mds/timestamp.md',
+				contentElementId: 'mdContent',
+				assetBase: 'mds/',
+			});
 		</script>
 	</body>
 </html>
